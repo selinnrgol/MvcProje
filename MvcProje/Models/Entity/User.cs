@@ -1,4 +1,6 @@
-﻿namespace MvcProje.Models.Entity
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace MvcProje.Models.Entity
 {
     public class User
     {
@@ -8,4 +10,14 @@
 
         public string UserSurname { get; set; }
 
+        public string UserImage { get; set; }
+
+        public string UserAbout { get; set; }
+
+        public string UserPassword { get; set; }
+
+        public bool UserStatus { get; set; }
+
+        public List<Animal> Animals { get; set; }
     }
+}
