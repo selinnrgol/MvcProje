@@ -8,6 +8,11 @@
         public DateTime CommentDate { get; set; }
         public bool CommentStatus { get; set; }
 
+        public int AnimalID;
+        public Animal Animal { get; set; }
+
+
+
     
     }
 }

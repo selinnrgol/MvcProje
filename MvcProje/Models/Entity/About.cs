@@ -6,8 +6,8 @@
         public string AboutDetail { get; set; } 
         public string AboutImage { get; set; }
 
-        public bool AboutStatıs { get; set; }   
+        public bool AboutStatus { get; set; }   
 
-        List<Animal> Animals { get; set; }
+        public List<Animal> Animals { get; set; }
     }
 }
