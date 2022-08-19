@@ -1,4 +1,6 @@
-﻿namespace MvcProje.Models.Entity
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MvcProje.Models.Entity
 {
     public class Animal
     {
@@ -8,14 +10,13 @@
         public string AnimalName { get; set; }
         public string AnimalDescription { get; set; }
         public bool AnimalStatus { get; set; }
-        public List <Comment> Comments { get; set; }
 
-        public int CategoryID;
+        public int UserID { get; set; }
+
+        public User User { get; set; }
+        public int CategoryID { get; set; }
         public Category Category { get; set; }
 
-        public int UserID;
-        public User User { get; set; }
-
-       
+        public List<Comment> Comments { get; set; }
     }
 }

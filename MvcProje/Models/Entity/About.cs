@@ -1,4 +1,6 @@
-﻿namespace MvcProje.Models.Entity
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MvcProje.Models.Entity
 {
     public class About
     {
@@ -8,6 +10,5 @@
 
         public bool AboutStatus { get; set; }   
 
-        public List<Animal> Animals { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace MvcProje.Models.Entity
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MvcProje.Models.Entity
 {
     public class Comment
     {
@@ -7,12 +9,8 @@
         public string CommentContent { get; set; }
         public DateTime CommentDate { get; set; }
         public bool CommentStatus { get; set; }
-
-        public int AnimalID;
+        public int AnimalID { get; set; }
         public Animal Animal { get; set; }
 
-
-
-    
     }
 }
