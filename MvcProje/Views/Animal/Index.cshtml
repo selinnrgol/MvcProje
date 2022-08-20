@@ -1,0 +1,125 @@
+﻿@using MvcProje.Models.Entity
+@model List<Animal>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Weblog a Blogging Category Bootstrap responsive WebTemplate | Blog3 :: w3layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Weblog a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="~/Tema/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="~/Tema/stylesheet" href="css/single.css">
+	<link href="~/Tema/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="~/Tema/css/fontawesome-all.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+	    rel="stylesheet">
+</head>
+
+<body>
+	@await Html.PartialAsync("Navbar")
+
+	<!--/main-->
+	<section class="main-content-w3layouts-agileits">
+		<div class="container">
+			<h3 class="tittle" style="color:#8E44AD">Hayvanlar</h3>
+			<div class="inner-sec">
+				<!--left-->
+				<div class="left-blog-info-w3layouts-agileits text-left">
+					<div class="row">
+						@foreach(var item in Model){
+
+						
+						<div class="col-lg-4 card">
+							<a href="single.html">
+								<img src="@item.AnimalImage" class="card-img-top img-fluid" alt="">
+							</a>
+							<div class="card-body">
+								<ul class="blog-icons my-4">
+									<li>
+											<i class="fas fa-circle"  style="color:#8E44AD"></i>@item.AnimalAge Yaşında
+									</li>
+									<li >
+											<i class="fa fa-arrow-right" style="color:#8E44AD"></i>@item.CategoryID
+									</li>	
+
+								</ul>
+								<h5 class="card-title">
+									<a href="single.html">@item.AnimalName</a>
+								</h5>
+								<p class="card-text mb-3">@item.AnimalDescription </p>
+								<a href="single.html" class="btn btn-secondary read-m">Hayvanı Görüntüle</a>
+							</div>
+						</div>
+						
+						}
+					</div>
+					<!--//left-->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//main-->
+	@await Html.PartialAsync("Footer")
+	<!-- js -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+	<!--/ start-smoth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<!--// end-smoth-scrolling -->
+
+	<script>
+		$(document).ready(function () {
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+
+	<!-- //Custom-JavaScript-File-Links -->
+	<script src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
