@@ -1,0 +1,29 @@
+﻿@using MvcProje.Models.Entity
+@model List<About>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="container">
+    @foreach (var item in Model)
+    {
+
+        <div class="blog-grid-top m-5">
+
+
+            <div class="blog_info_left_grid">
+                <a href="single.html">
+                    <img src="@item.AboutImage" class="img-fluid" alt="">
+                </a>
+            </div>
+            <h3>
+                Websitemiz Hakkında
+            </h3>
+            <p>
+                @item.AboutDetail
+            </p>
+            <a href="/Animal/Index/" class="btn btn-secondary read-m">Evcil Hayvan Listesine Git</a>
+        </div>
+    }
+</div>
