@@ -10,6 +10,7 @@ namespace MvcProje.Controllers
         public IActionResult Index()
 		{
 			var categories = repository.List();
+
 			return View(categories);
 		}
 	}

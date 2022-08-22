@@ -7,7 +7,9 @@ namespace MvcProje.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
             optionsBuilder.UseSqlServer("server=SELINGOL\\MSSQLSERVER02;database=DbAnimal; integrated security=true; ");
+
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Animal> Animals { get; set; }
