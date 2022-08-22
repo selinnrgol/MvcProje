@@ -32,7 +32,7 @@ namespace MvcProje.Repositories
         }
         public T Find(Expression<Func<T,bool>> where)
         {
-            return db.Set<T>().FirstOrDefault(where);
+            return db.Set<T>().FirstOrDefault(where);//ilk değeri döndür
         }
     }
 }
