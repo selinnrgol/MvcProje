@@ -22,6 +22,8 @@ namespace MvcProje.Controllers
         [HttpPost]
         public IActionResult AnimalAdd(Animal p)
         {
+            p.AnimalStatus = true;
+            p.UserID = 15;
             repository.TAdd(p);
             return RedirectToAction("Index"); //admin controller daki index metoduna gönderme yani yukarı
         }

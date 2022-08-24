@@ -34,5 +34,6 @@ namespace MvcProje.Repositories
         {
             return db.Set<T>().FirstOrDefault(where);//ilk değeri döndür
         }
+        
     }
 }

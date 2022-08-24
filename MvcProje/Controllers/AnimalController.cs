@@ -12,10 +12,5 @@ namespace MvcProje.Controllers
             var animals = repository.List();
             return View(animals);
         }
-        public IActionResult AnimalDetails(int id)
-        {
-            return View();
-        }
-
     }
 }

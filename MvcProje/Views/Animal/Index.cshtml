@@ -16,7 +16,7 @@
 					@foreach (var item in Model)
 					{
 						<div class="col-lg-4 card">
-							<a href="single.html">
+							<a>
 								<img src="@item.AnimalImage" class="card-img-top img-fluid" alt="">
 							</a>
 							<div class="card-body">
@@ -25,15 +25,14 @@
 										<i class="fas fa-circle" style="color:#8E44AD"></i>@item.AnimalAge Yaşında
 									</li>
 									<li>
-										<i class="fa fa-arrow-right" style="color:#8E44AD"></i>@item.CategoryID
+										<i class="fa fa-arrow-right" style="color:#8E44AD"></i>@item.CategoryID. kategori
 									</li>
 
 								</ul>
 								<h5 class="card-title">
-									<a href="single.html">@item.AnimalName</a>
+									<a>@item.AnimalName</a>
 								</h5>
 								<p class="card-text mb-3">@item.AnimalDescription </p>
-								<a href="/Animal/AnimalDetails/@item.AnimalID/" class="btn btn-secondary read-m">Hayvanı Görüntüle</a>
 							</div>
 						</div>
 					}
